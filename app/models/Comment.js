@@ -1,17 +1,17 @@
 import mongoose from "mongoose";
 
 const Comment = mongoose.Schema({
-    commentID:{
-        type: String
-    },
     articleID:{
-        type: String
+        type: String,
+        required: true
     },
     comment:{
-        type: String
+        type: String,
+        required: true
     },
     username:{
-        type: String
+        type: String,
+        required: true
     }
 })
 
