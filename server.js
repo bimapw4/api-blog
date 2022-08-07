@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
+import articleRoute from "./routes/ArticleRoutes.js";
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.use(express.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
-
+app.use("/article",articleRoute)
 // simple route
 app.get("/", (req, res) => {
   res.json({ message: "Hello World!!!" });
