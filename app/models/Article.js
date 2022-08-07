@@ -1,14 +1,13 @@
 import mongoose from "mongoose";
 
 const Article = mongoose.Schema({
-    articleID:{
-        type: String
-    },
     title:{
-        type: String
+        type: String,
+        required: true
     },
     content:{
-        type: String
+        type: String,
+        required: true
     }
 })
 
