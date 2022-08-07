@@ -3,11 +3,17 @@ import mongoose from "mongoose";
 const Article = mongoose.Schema({
     title:{
         type: String,
-        required: true
+        required: true,
     },
     content:{
         type: String,
         required: true
+    },
+    createAt:{
+        type: String
+    },
+    updateAt:{
+        type: String
     }
 })
 
